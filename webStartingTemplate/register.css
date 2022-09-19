@@ -1,0 +1,16 @@
+*{
+    box-sizing: border-box;
+}
+.container-fluid {
+    background-color: #d42424;
+}
+.logo {
+    border-radius: 50px;
+}
+.btn{
+    background-color: #4723dc;
+    color: #ffffff;
+}
+.here{
+    color: #4723dc;
+}
