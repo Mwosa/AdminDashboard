@@ -5,7 +5,17 @@
     background-color: #d42424;
 }
 .logo {
-    border-radius: 50px;
+    border-radius: 50%;
+}
+.logoo{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.card{
+ transform: translate(-50% -50%);
+ width: 500px;
+ 
 }
 .btn{
     background-color: #4723dc;

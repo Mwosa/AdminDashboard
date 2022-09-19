@@ -13,41 +13,39 @@
     </section>
 
     <section>
-        <div class="logo">
-            <img src="./images/zlgo.PNG" alt="zalego logo">
+        <div class="logoo">
+            <img src="./images/zlgo.PNG" alt="zalego logo" class="logo">
         </div>
     </section>
+
  
-<div class="container py-5">
-<div class="card">
+<div class="container py-3">
+    <div class="card">
     <div class="card-body">
         
         <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Username:</label>
             <input type="username" class="form-control" id="exampleFormControlInput1">
-          </div>
-          <div class="mb-3">
+        </div>
+        <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Email:</label>
             <input type="email" class="form-control" id="exampleFormControlInput1">
-          </div>
-          <div class="mb-3">
+        </div>
+        <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Password:</label>
             <input type="password" class="form-control" id="exampleFormControlInput1">
-          </div>
-          <div class="mb-3">
+        </div>
+        <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">Confirm Password:</label>
             <input type="password" class="form-control" id="exampleFormControlInput1">
-          </div>
+        </div>
 
         <button class="btn btn-light" type="button" value="submit">Submit</button>
 
         <p>Have an account? Sign in <span class="here">here</span></p>
-    
-    
-
+        
     </div>
-
-</div>
+    </div>
 </div>
 
 

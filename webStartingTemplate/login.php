@@ -13,12 +13,12 @@
     </section>
 
     <section>
-        <div class="logo">
-            <img src="./images/zlgo.PNG" alt="zalego logo">
+        <div class="logoo">
+            <img src="./images/zlgo.PNG" alt="zalego logo" class="logo">
         </div>
     </section>
  
-<div class="container py-5">
+<div class="container py-3">
 <div class="card">
     <div class="card-body">
         
