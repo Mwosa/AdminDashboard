@@ -66,7 +66,7 @@
 
 				<div class="col-lg-3">
 					<div class="card-header bg-dark text-white text-center">
-						<span>Top content</span>
+						<span>Top student</span>
 					</div>
 					<div class="card-body">
 						<span><i class="fa fa-group fa-3x"></i></span>
