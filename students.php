@@ -17,43 +17,17 @@
 	<!-- All our code. write here   -->
 
 	<!--to hold all code for our header info-->
-	<div class="header">
-		<img src="./images/zlgo.PNG" alt="zalego logo" height="50" width="50" class="rounded-circle">
-
-	</div>
+	<?php
+		include('includes/header.php')
+	?>
 
 
 	<!--to hold all code for our sidebar info-->
 	<div class="sidebar">
-		<nav>
-			<ul>
-				<li>
-					<a href="index.php">
-						<span><i class="fa fa-tachometer"></i></span>
-						<span>Dashboard</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<span><i class="fa fa-group"></i> </span>
-						<span>Students</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<span><i class="fa fa-folder-open"></i> </span>
-						<span>Courses</span>
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<span><i class="fa fa-graduation-cap"></i> </span>
-						<span>Campus</span>
-					</a>
-				</li>
-			</ul>
-		</nav>
-
+	<?php
+		include('includes/sidebar.php')
+		?>
+	</div>
 	</div>
 
 
@@ -64,9 +38,10 @@
 				<div class="col-lg-12">
 					<div class="card-header bg-dark text-white text-center">
 						<span>Students</span>
+						<a href="AddStudent.php" class="btn btn-sm btn-secondary float-right">Add Student</a>
 					</div>
 					<div class="card-body">
-                        <table>
+						<table class="table table-stripped table-hover col-lg-12">
                             <thead>
                                 <tr>
                                     <th>Name</th>
@@ -77,19 +52,19 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
                                     <td>NELSON</td>
+                                    <td>1</td>
                                     <td>077756658</td>
                                     <td>Web dev</td>
                                     <td>
-                                        <a href="#" class="btn btn-primary btn-sm">Edit</a>
-                                        <a href="#" class="btn btn-primary btn-sm">View</a>
-                                        <a href="#" class="btn btn-primary btn-sm">Delete</a>
+                                        <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                                        <a href="#" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
+                                        <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
+					</div>
 					<div class="card-footer"></div>
 				</div>
 
