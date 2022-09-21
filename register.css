@@ -12,9 +12,14 @@
     display: flex;
     align-items: center;
 }
+.container{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
 .card{
- transform: translate(-50% -50%);
- width: 500px;
+    transform: translate(-50% -50%);
+    width: 500px;
  
 }
 .btn{
@@ -23,4 +28,5 @@
 }
 .here{
     color: #4723dc;
+    text-decoration: none;
 }

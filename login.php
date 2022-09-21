@@ -33,7 +33,7 @@
 
           <button class="btn btn-light" type="button" value="submit">Submit</button>
 
-        <p>Have an account? Sign in <span class="here">here</span></p>
+        
     
     </div>
 </div>
