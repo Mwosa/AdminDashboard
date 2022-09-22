@@ -30,7 +30,37 @@
 		?>
 	</div>
 
-	</div>
+
+
+	<?php
+	//1.DB connection
+	require_once('dbconnection.php');
+
+	//2.check if form fields have values
+	if(isset ($_POST['enrollmentButton']) ){
+	//fetch form values
+	$studentName = $_POST['name'];
+	$regNumber = $_POST['reg_number'];
+	$phone = $_POST['phone'];
+	$email = $_POST['email'];
+	$course = $_POST['course'];
+
+	//3.insert into table, enrollments
+	$insertRecords = mysqli_query($conn, "INSERT INTO enrollments(name, reg_number, phone, email, course)
+							 VALUES('$studentName','$regNumber','$phone','$email','$course')");
+			
+	if($insertRecords)
+	{
+		echo "Data submitted successfully";
+	}
+	else
+	{
+		echo "Error occured!";
+	}
+
+	}
+	?>
+
 
 
 	<!--to hold all code for our main content info-->
@@ -44,23 +74,24 @@
 				</div>
 				
                 <div class="container py-3">
+				<form action="addstudent.php" method="post">
                     <div class="card">
                     <div class="card-body">
                         <div class="mb-3">
                         	<label for="name" class="form-label">NAME:</label>
-            				<input type="name" class="form-control" id="name">
+            				<input type="name" name="name" class="form-control" id="name">
         				</div>
         				<div class="mb-3">
             				<label for="registration" class="form-label">REG NUMBER:</label>
-            				<input type="registration" class="form-control" id="registration">
+            				<input type="registration" name="reg_number" class="form-control" id="registration">
         				</div>
         				<div class="mb-3">
             				<label for="phone" class="form-label">PHONE NO:</label>
-            				<input type="phone" class="form-control" id="phone">
+            				<input type="phone" name="phone" class="form-control" id="phone">
         				</div>
 						<div class="mb-3">
             				<label for="email" class="form-label">EMAIL:</label>
-            				<input type="email" class="form-control" id="email">
+            				<input type="email" name="email" class="form-control" id="email">
         				</div>
         				<div class="mb-3">
             				<label for="course" class="form-label">COURSE:</label>
@@ -74,11 +105,12 @@
         				</div>
 						
 
-        <button class="btn btn-light submit text-white" type="button" value="submit">Submit</button>
+        				<button class="btn btn-light submit text-white" type="submit" name="enrollmentButton" value="submit">Submit</button>
         
-    </div>
-    </div>
-</div>
+    				</div>
+    				</div>
+				</form>
+				</div>
 
 
 			</div>
