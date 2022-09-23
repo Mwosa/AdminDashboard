@@ -28,11 +28,13 @@
 		<?php
 			include('includes/sidebar.php')
 		?>
+		
 	</div>
 
 
 
 	<?php
+	$message="";
 	//1.DB connection
 	require_once('dbconnection.php');
 
@@ -51,11 +53,11 @@
 			
 	if($insertRecords)
 	{
-		echo "Data submitted successfully";
+		$message= "Data submitted successfully";
 	}
 	else
 	{
-		echo "Error occured!";
+		$message= "Error occured!";
 	}
 
 	}
@@ -69,7 +71,10 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="card-header bg-dark text-white text-center">
-						<span><i class="fa fa-pencil"></i> ADD STUDENT</span>
+						<span><i class="fa fa-pencil"></i> ADD STUDENT</span> <br>
+						<?php
+							echo $message;
+						?>
 					</div>	
 				</div>
 				

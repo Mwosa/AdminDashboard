@@ -26,9 +26,16 @@
 	<div class="sidebar">
 	<?php
 		include('includes/sidebar.php')
-		?>
+	?>
+
+	<?php
+		//1. DB connection
+		require_once('dbconnection.php');
+		//2. Fetch all records
+		$fetchStudentRecords = mysqli_query($conn, "SELECT * FROM enrollments");
+	?>
 	</div>
-	</div>
+	
 
 
 	<!--to hold all code for our main content info-->
@@ -44,24 +51,33 @@
 						<table class="table table-stripped table-hover col-lg-12">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th>Reg No</th>
-                                    <th>Phone Number</th>
-                                    <th>Course</th>
+								<th>No.</th>
+								<th>Name</th>
+								<th>Reg Number</th>
+								<th>Phone Number</th>
+                                <th>Email</th>
+                                <th>Course</th>
+                            	<th>Enrolled on</th>
+								<th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
+								<?php while ( $row= mysqli_fetch_array($fetchStudentRecords)) { ?>
                                 <tr>
-                                    <td>NELSON</td>
-                                    <td>1</td>
-                                    <td>077756658</td>
-                                    <td>Web dev</td>
+									<td><?php echo $row["id"] ?></td>
+                                    <td><?php echo $row["name"] ?></td>
+									<td><?php echo $row["reg_number"] ?></td>
+                                    <td><?php echo $row["phone"] ?></td>
+									<td><?php echo $row["email"] ?></td>
+									<td><?php echo $row["course"] ?></td>
+									<td><?php echo $row["created_at"] ?></td>
                                     <td>
                                         <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
                                         <a href="#" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
                                         <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                     </td>
                                 </tr>
+								<?php } ?>
                             </tbody>
                         </table>
 					</div>
