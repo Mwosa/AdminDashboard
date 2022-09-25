@@ -72,7 +72,7 @@
 									<td><?php echo $row["course"] ?></td>
 									<td><?php echo $row["created_at"] ?></td>
                                     <td>
-                                        <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                                        <a href="edituser.php" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
                                         <a href="#" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
                                         <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                     </td>
