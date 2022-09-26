@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bootstrap Admin Template</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Creating admin dashboard">
-	<meta name="keywords" content="HTML,CSS,Zalego,Technology,Zalego institute,JavaScript">
-	<meta name="author" content="Nelson">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="style.css">
+	<?php
+		include('includes/links.php');
+	?>
 </head>
 
 
@@ -18,14 +12,14 @@
 
 	<!--to hold all code for our header info-->
 	<?php
-		include('includes/header.php')
+		include('includes/header.php');
 	?>
 
 
 	<!--to hold all code for our sidebar info-->
 	<div class="sidebar">
 	<?php
-		include('includes/sidebar.php')
+		include('includes/sidebar.php');
 	?>
 
 	<?php
@@ -72,7 +66,7 @@
 									<td><?php echo $row["course"] ?></td>
 									<td><?php echo $row["created_at"] ?></td>
                                     <td>
-                                        <a href="edituser.php" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                                        <a href="edituser.php?id=<?php echo $row['id']?>" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
                                         <a href="#" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
                                         <a href="#" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                     </td>

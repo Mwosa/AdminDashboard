@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Bootstrap Admin Template</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="Creating admin dashboard">
-	<meta name="keywords" content="HTML,CSS,Zalego,Technology,Zalego institute,JavaScript">
-	<meta name="author" content="Nelson">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-	<link rel="stylesheet" href="style.css">
+	<?php
+		include('includes/links.php');
+	?>
 </head>
 
 
@@ -18,14 +12,14 @@
 
 	<!--to hold all code for our header info-->
 	<?php
-		include('includes/header.php')
+		include('includes/header.php');
 	?>
 
 
 	<!--to hold all code for our sidebar info-->
 	<div class="sidebar">
 		<?php
-		include('includes/sidebar.php')
+		include('includes/sidebar.php');
 		?>
 	</div>
 
