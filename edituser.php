@@ -1,6 +1,6 @@
 <!--php file for displaying edit user details-->
 <?php
-    $msg = '';
+    
     //DB connection
     require_once('dbconnection.php');
     $sql= mysqli_query($conn, "SELECT * FROM enrollments WHERE id = '".$_GET['id']."' ");
@@ -55,24 +55,43 @@
         <div class="card">
             <div class="card-header bg-dark text-center text-white">Edit User Account Data</div>  
             <div class="card-body">
-                <span><?php echo $msg ?></span>
-                <form method="POST">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label for="username">Username:</label>
-                                <input type="text" value="<?php echo $name ?>" class="form-control" id="username" name="username">
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" value="<?php echo $email ?>" class="form-control" id="email" name="email">
-                            </div>
-                        </div>
-                        <input type="submit" value="update" class="btn btn-dark btn-sm" name="update">
-                    </div>
-                </form>
+    
+                <form action="edituser.php" method="post">
+                    <div class="card">
+                    <div class="card-body">
+                        <div class="mb-3">
+                        	<label for="name" class="form-label">NAME:</label>
+            				<input type="name" name="name" class="form-control" id="name">
+        				</div>
+        				<div class="mb-3">
+            				<label for="registration" class="form-label">REG NUMBER:</label>
+            				<input type="registration" name="reg_number" class="form-control" id="registration">
+        				</div>
+        				<div class="mb-3">
+            				<label for="phone" class="form-label">PHONE NO:</label>
+            				<input type="phone" name="phone" class="form-control" id="phone">
+        				</div>
+						<div class="mb-3">
+            				<label for="email" class="form-label">EMAIL:</label>
+            				<input type="email" name="email" class="form-control" id="email">
+        				</div>
+        				<div class="mb-3">
+            				<label for="course" class="form-label">COURSE:</label>
+            				<select name="course" id="course" class="form-control">
+								<option value="">--select course--</option>
+								<option value="Web Design & Development">Web Design & Development</option>
+								<option value="Android Application Development">Android Application Development</option>
+								<option value="Cyber Security">Cyber Security</option>
+								<option value="Data Analysis">Data Analysis</option>
+							</select>
+        				</div>
+						
+
+        				<button class="btn btn-light submit text-white" type="submit" name="updateButton" value="submit">Submit</button>
+        
+    				</div>
+    				</div>
+				</form>
             </div>  
         </div>
     </div>
