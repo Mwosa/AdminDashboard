@@ -7,7 +7,10 @@
     while($row=mysqli_fetch_array($sql))
     {
         $name = $row['name'];
+        $reg_number = $row['reg_number'];
+        $phone = $row['phone'];
         $email = $row['email'];
+        $course = $row['course'];
     }
 
     //update user data
@@ -61,23 +64,23 @@
                     <div class="card-body">
                         <div class="mb-3">
                         	<label for="name" class="form-label">NAME:</label>
-            				<input type="name" name="name" class="form-control" id="name">
+            				<input type="name" value="<?php echo $name ?>" name="name" class="form-control" id="name">
         				</div>
         				<div class="mb-3">
             				<label for="registration" class="form-label">REG NUMBER:</label>
-            				<input type="registration" name="reg_number" class="form-control" id="registration">
+            				<input type="registration" value="<?php echo $reg_number ?>" name="reg_number" class="form-control" id="registration">
         				</div>
         				<div class="mb-3">
             				<label for="phone" class="form-label">PHONE NO:</label>
-            				<input type="phone" name="phone" class="form-control" id="phone">
+            				<input type="phone" value="<?php echo $phone ?>" name="phone" class="form-control" id="phone">
         				</div>
 						<div class="mb-3">
             				<label for="email" class="form-label">EMAIL:</label>
-            				<input type="email" name="email" class="form-control" id="email">
+            				<input type="email" value="<?php echo $email ?>" name="email" class="form-control" id="email">
         				</div>
         				<div class="mb-3">
             				<label for="course" class="form-label">COURSE:</label>
-            				<select name="course" id="course" class="form-control">
+            				<select name="course" value="<?php echo $course ?>" id="course" class="form-control">
 								<option value="">--select course--</option>
 								<option value="Web Design & Development">Web Design & Development</option>
 								<option value="Android Application Development">Android Application Development</option>
