@@ -6,6 +6,7 @@
     $sql= mysqli_query($conn, "SELECT * FROM enrollments WHERE id = '".$_GET['id']."' ");
     while($row=mysqli_fetch_array($sql))
     {
+        $id = $row['id'];
         $name = $row['name'];
         $reg_number = $row['reg_number'];
         $phone = $row['phone'];
@@ -14,15 +15,18 @@
     }
 
     //update user data
-    if(isset( $_POST['update']))
+    if(isset( $_POST['updateButton']))
     {
         //fetch form data
         $updateName = $_POST['name'];
         $updateEmail = $_POST['email'];
+        $updateRegNumber = $_POST['reg_number'];
+        $updatePhone = $_POST['phone'];
+        $updateCourse = $_POST['course'];
         //sql query
-        $sql = mysqli_query($conn, "UPDATE enrollments SET name='$updateName', email='$updateEmail' WHERE id= '".$_GET['id']."' ");
+        $sql = mysqli_query($conn, "UPDATE enrollments SET name='$updateName', email='$updateEmail', reg_number='$updateRegNumber', phone='$updatePhone', course='$updateCourse' WHERE id= '".$_GET['id']."' ");
         //check if query is true
-        if($query)
+        if($sql)
         {
             $msg = "User data updated successfully";
         }
@@ -59,7 +63,7 @@
             <div class="card-header bg-dark text-center text-white">Edit User Account Data</div>  
             <div class="card-body">
     
-                <form action="edituser.php" method="post">
+                <form action="edituser.php?id=<?php echo $id ?>"  method="post">
                     <div class="card">
                     <div class="card-body">
                         <div class="mb-3">
@@ -80,8 +84,8 @@
         				</div>
         				<div class="mb-3">
             				<label for="course" class="form-label">COURSE:</label>
-            				<select name="course" value="<?php echo $course ?>" id="course" class="form-control">
-								<option value="">--select course--</option>
+            				<select name="course"  id="course" class="form-control">
+								<option value="<?php echo $course ?>"><?php echo $course ?></option>
 								<option value="Web Design & Development">Web Design & Development</option>
 								<option value="Android Application Development">Android Application Development</option>
 								<option value="Cyber Security">Cyber Security</option>
@@ -90,7 +94,7 @@
         				</div>
 						
 
-        				<button class="btn btn-light submit text-white" type="submit" name="updateButton" value="submit">Submit</button>
+        				<button class="btn btn-success submit text-white" type="submit" name="updateButton" >Update</button>
         
     				</div>
     				</div>
