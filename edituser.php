@@ -1,6 +1,7 @@
 <!--php file for displaying edit user details-->
 <?php
 $msg = '';
+
     
     //DB connection
     require_once('dbconnection.php');
