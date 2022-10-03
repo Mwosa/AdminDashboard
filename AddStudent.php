@@ -40,6 +40,21 @@
 	$email = $_POST['email'];
 	$course = $_POST['course'];
 
+	//check if name exists in the database
+	$sqlName = mysqli_query($conn, "SELECT * FROM enrollments WHERE name = '$name' ");
+	$checkName = mysqli_num_rows('$sqlName');
+	//check for email
+	$sqlEmail = mysqli_query($conn, "SELECT * FROM enrollments WHERE email = '$email' ");
+	$checkEmail = mysqli_num_rows('$sqlEmail');
+
+
+	if($checkName !=0){
+		$msg = "Username already exists";
+	}
+	elseif($checkEmail !=0){
+		$msg = "Email already in use. Please try a different email address";
+	}
+
 	//3.insert into table, enrollments
 	$insertRecords = mysqli_query($conn, "INSERT INTO enrollments(name, reg_number, phone, email, course)
 							 VALUES('$studentName','$regNumber','$phone','$email','$course')");

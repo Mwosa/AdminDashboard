@@ -1,5 +1,6 @@
 <!--php file for displaying edit user details-->
 <?php
+$msg = '';
     
     //DB connection
     require_once('dbconnection.php');
@@ -28,11 +29,15 @@
         //check if query is true
         if($sql)
         {
-            $msg = "User data updated successfully";
+            $msg = "
+                    <div class='alert alert-success' role='alert'><strong>Success!</strong>User data updated successfully.</div> 
+                    ";
         }
         else
         {
-            $msg = "Error occured";
+            $msg = "
+                    <div class='alert alert-danger' role='alert'><strong>Error!</strong>Something went wrong. Please try again</div>
+                    ";
         }
     }
 
@@ -62,8 +67,8 @@
         <div class="card">
             <div class="card-header bg-dark text-center text-white">Edit User Account Data</div>  
             <div class="card-body">
-    
-                <form action="edituser.php?id=<?php echo $id ?>"  method="post">
+            <span><?php echo $msg ?></span>
+                <form action="edituser.php?id=<?php echo $id ?>"  method="POST">
                     <div class="card">
                     <div class="card-body">
                         <div class="mb-3">
