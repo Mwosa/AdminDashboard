@@ -6,8 +6,8 @@
     $sql = mysqli_query($conn, "DELETE FROM enrollments WHERE id='".$_GET['id']."' ");
     if($sql)
     {
+        header('location:students.php');
         echo "user deleted successfully.";
-        header('location:displayUser.php');
     }
     else
     {

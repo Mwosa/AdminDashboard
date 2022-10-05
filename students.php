@@ -56,9 +56,11 @@
                                 </tr>
                             </thead>
                             <tbody>
-								<?php while ( $row= mysqli_fetch_array($fetchStudentRecords)) { ?>
+								<?php
+								$count=1;
+								 while ( $row= mysqli_fetch_array($fetchStudentRecords)) { ?>
                                 <tr>
-									<td><?php echo $row["id"] ?></td>
+									<td><?php echo $count ?></td>
                                     <td><?php echo $row["name"] ?></td>
 									<td><?php echo $row["reg_number"] ?></td>
                                     <td><?php echo $row["phone"] ?></td>
@@ -71,7 +73,7 @@
                                         <a href="deleteUser.php?id=<?php echo $row['id']?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
                                     </td>
                                 </tr>
-								<?php } ?>
+								<?php $count++; } ?>
                             </tbody>
                         </table>
 					</div>
