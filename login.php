@@ -23,18 +23,20 @@
     <div class="card-body">
         
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Username:</label>
-            <input type="username" class="form-control" id="exampleFormControlInput1">
+            <label for="name" class="form-label">Username:</label>
+            <input type="name" class="form-control" id="name">
           </div>
           <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Password:</label>
-            <input type="password" class="form-control" id="exampleFormControlInput1">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" class="form-control" id="password">
           </div>
 
-          <button class="btn btn-light" type="button" value="submit">Submit</button>
-
-        
+          <button class="btn btn-light" type="button" value="submit">Submit</button>   
     
     </div>
 </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+</body>
+</html>

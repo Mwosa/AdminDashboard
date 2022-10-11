@@ -24,23 +24,23 @@
     <div class="card-body">
         
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Username:</label>
-            <input type="username" class="form-control" id="exampleFormControlInput1">
+            <label for="name" class="form-label">Username:</label>
+            <input type="text" class="form-control" id="name" name="name">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Email:</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1">
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" class="form-control" id="email" name="email">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Password:</label>
-            <input type="password" class="form-control" id="exampleFormControlInput1">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" class="form-control" id="password" name="password">
         </div>
         <div class="mb-3">
-            <label for="exampleFormControlInput1" class="form-label">Confirm Password:</label>
-            <input type="password" class="form-control" id="exampleFormControlInput1">
+            <label for="password" class="form-label">Confirm Password:</label>
+            <input type="password" class="form-control" id="password" name="password">
         </div>
 
-        <button class="btn btn-light" type="button" value="submit">Submit</button>
+        <button class="btn btn-light" type="button" value="submit" name="register">Register</button>
 
         <p>Have an account? Sign in<a href="login.php" class="here"> here</a></p>
         
