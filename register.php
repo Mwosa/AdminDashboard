@@ -1,3 +1,9 @@
+<?php
+$msg = '';
+require_once('processRegister.php');
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +15,7 @@
     <section class="container-fluid">
         <div class="col-sm-12 col-md-12 col-lg-12">
             <h3 class="text-white p-4 text-center">Zalego | Admin Register</h3>
+            <span><?php echo $msg ?></span>
         </div>
     </section>
 
@@ -16,6 +23,7 @@
         <div class="logoo">
             <img src="./images/zlgo.PNG" alt="zalego logo" class="logo">
         </div>
+        
     </section>
 
  
@@ -40,7 +48,7 @@
             <input type="password" class="form-control" id="password" name="password">
         </div>
 
-        <button class="btn btn-light" type="button" value="submit" name="register">Register</button>
+        <button class="btn btn-light" type="button" value="submit" name="registerUser">Register</button>
 
         <p>Have an account? Sign in<a href="login.php" class="here"> here</a></p>
         
