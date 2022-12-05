@@ -32,13 +32,19 @@
 	require_once('dbconnection.php');
 
     if(isset ($_POST['messageButton']) ){
+	//fetch form values
+	$name = $_POST['name'];
+	$email = $_POST['email'];
+	$phone = $_POST['phone'];
+	$subject = $_POST['subject'];
+	$message = $_POST['message'];
        
     //2.insert into table, messages
     
-        $insertData = mysqli_query($conn, "INSERT INTO messages(name, email, phone, subject, message)
+        $insertRecords = mysqli_query($conn, "INSERT INTO messages(name, email, phone, subject, message)
 							 VALUES('$name','$email','$phone','$subject','$message')");
 			
-	if($insertData)
+	if($insertRecords)
 	{
 		$msg= "Data submitted successfully";
 	}
@@ -68,7 +74,7 @@
 				</div>
 				
                 <div class="container py-3">
-				<form action="addstudent.php" method="post">
+				<form action="addmessage.php" method="post">
                     <div class="card">
                     <div class="card-body row">
                         <div class="mb-3 col-lg-6">
@@ -85,7 +91,7 @@
         				</div>
         				<div class="mb-3 col-lg-6">
             				<label for="course" class="form-label">Subject:</label>
-            				<select name="course" id="course" class="form-control">
+            				<select name="subject" id="subject" class="form-control">
 								<option value="">--select course--</option>
 								<option value="Web Design & Development">Web Design & Development</option>
 								<option value="Android Application Development">Android Application Development</option>

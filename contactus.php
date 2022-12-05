@@ -41,7 +41,7 @@
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="card-header bg-dark text-white text-center">
-						<span>Students</span>
+						<span>Students' Messages</span>
 						<a href="addmessage.php" class="btn btn-sm btn-secondary float-right">Add Message</a>
 					</div>
 					<div class="card-body">
@@ -69,6 +69,10 @@
 									<td><?php echo $row["subject"] ?></td>
                                     <td><?php echo $row["message"] ?></td>
 									<td><?php echo $row["created_at"] ?></td>
+									<td>
+                                        <a href="editmessage.php?id=<?php echo $row['id']?>" class="btn btn-primary btn-sm"><i class="fa fa-edit"></i></a>
+                                        <a href="deleteMessage.php?id=<?php echo $row['id']?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
+                                    </td>
                                 </tr>
 								<?php $count++; } ?>
                             </tbody>
